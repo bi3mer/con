@@ -1,0 +1,13 @@
+module main
+
+main() i32
+{
+    a : i32 = 100;
+    // world += 3 // this is illegal because a is constant
+    b : var i32 = 100;
+    b++; // legal, because b is not constant
+
+    print("{} > {} -> {}", b, a, b > a); // "101 > 100 -> true"
+
+    return 0;
+}

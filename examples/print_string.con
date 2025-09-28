@@ -1,0 +1,9 @@
+module main
+
+main() i32
+{
+    world : char* = "Horld";
+    print("Hello, {}!", world);
+
+    return 0;
+}
