@@ -1,9 +1,11 @@
 module main
 
-main() i32
-{
-    world : char* = "Horld";
-    print("Hello, {}!", world);
+import "console"
 
-    return 0;
+fn main() i32
+{
+    world : char* = "Horld"
+    console.print("Hello, {}!", world)
+
+    return 0
 }

@@ -1,7 +1,9 @@
 module main
 
-main() i32
+import "console'
+
+fn main() i32
 {
-    print("Hello, World!");
-    return 0;
+    console.print("Hello, World!")
+    return 0
 }

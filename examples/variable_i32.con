@@ -1,13 +1,16 @@
 module main
 
-main() i32
+import "console"
+
+fn main() i32
 {
-    a : i32 = 100;
-    // world += 3 // this is illegal because a is constant
-    b : var i32 = 100;
-    b++; // legal, because b is not constant
+    // a : i32 = 100   // Declare a as a constant i32 set to 100
+    // a += 3          // Illegal: cannot add 3 to a constant
 
-    print("{} > {} -> {}", b, a, b > a); // "101 > 100 -> true"
+    a : var i32 = 100  // Declare a as a variable i32
+    a += 3             // Legal: add 3 to the variable a
 
-    return 0;
+    console.print("{}", a); // 103
+
+    return 0
 }
