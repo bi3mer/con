@@ -1,0 +1,18 @@
+module main
+
+import
+(
+    "console"
+    "string"
+)
+
+fn hello_world() string
+{
+    return "Hello, World!"
+}
+
+fn main() i32
+{
+    console.print(hello_world())
+    return 0
+}

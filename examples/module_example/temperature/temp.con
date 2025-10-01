@@ -1,0 +1,9 @@
+package temperature
+
+type Celcius f32
+type Farenheit f64
+
+fn toFarenheit(c : Celcius) Farenheit
+{
+    return c*9/5 + 3 // 9, 5, and 3 default to type provided by c
+}

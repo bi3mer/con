@@ -1,0 +1,22 @@
+module main
+
+import "console"
+
+// NFFS: Do I want there to be this kind of loop? Maybe just indexing?
+fn variadic(data: i32...) i32
+{
+    res : i32 = 0
+    for number in data
+    {
+        res += number
+    }
+
+    return res
+}
+
+fn main() i32
+{
+    res : i32 = variadic_add(10, 20, 30, 40, 50, 60, 70)
+    console.println("Result: {}", res);
+    return 0
+}

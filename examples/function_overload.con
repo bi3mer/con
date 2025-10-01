@@ -1,0 +1,55 @@
+module main
+
+import "console'
+
+fn max(a i32, b i32) i32
+{
+    if (a > b) return a
+    return b
+}
+
+fn max(a i64, b i64) i64
+{
+    if (a > b) return a
+    return b
+}
+
+// NFFS:
+// The above implementation is fine, but it won't be great for a lot of
+// people because they will have to implement a different version of max
+// for each type. It would be better if there was a way in the language
+// to do some kind of templating without it getting out of control...
+//
+// fn max(a T, b T) T
+// {
+//     ...
+// }
+//
+// I don't lov
+
+fn main() i32
+{
+    a_i32 : i32 = 10
+    b_i32 : i32 = 100
+    console.print(max(a_i32, b_i32))
+
+    a_i64 : i64 = 10
+    b_i64 : i64 = 100
+    console.print(max(a_i64, b_i64))
+
+    // ERROR
+    // console.print(max(a_i32, b_i64))
+    //
+    // This would be an error because con does not do implicit conversions.
+    //
+    // The solution is to cast one of the two like so:
+    console.print(max(a_i32, i64_to_i32(b_i64))
+
+    // There is a potential here: What if b_i64 was greater than the max number
+    // that an i32 could represent? See the documentation for i64_to_i32 to
+    // learn more:
+    //
+    // con --doc i64_to_i32
+
+    return 0
+}

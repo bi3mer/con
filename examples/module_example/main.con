@@ -1,0 +1,15 @@
+module main
+
+import
+(
+    "console"
+    "temperature
+)
+
+fn main() i32
+{
+    temp : temperature.Celcius = 32
+    console.print("conversion: {}", temperature.toFarenheit(temp))
+
+    return 0
+}
