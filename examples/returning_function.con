@@ -2,6 +2,7 @@ module main
 
 import "console'
 
+// NFFS: I don't think that the creation of callbacks will be supported by the lang
 fn add_one_callback() fn(i32) i32
 {
     return fn(num i32) i32
