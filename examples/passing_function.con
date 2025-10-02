@@ -1,0 +1,19 @@
+module main
+
+import "console'
+
+fn add_one(number i32, callback fn(i32) void
+{
+    console.println("Number before callback: {}", add)
+    callback(number + 1)
+}
+
+fn main() i32
+{
+    add_one(0, fn(num i32)
+    {
+        console.println("added: {}", num)
+    })
+
+    return 0
+}

@@ -1,0 +1,17 @@
+module main
+
+import "console'
+
+fn add_one_callback() fn(i32) i32
+{
+    return fn(num i32) i32
+    {
+        return num + 1
+    }
+}
+
+fn main() i32
+{
+    console.println("-100 + 1 = {}", add_one_callback()(-100))
+    return 0
+}

@@ -25,7 +25,7 @@ fn max(a i64, b i64) i64
 //     ...
 // }
 //
-// I don't lov
+// I don't love the above idea, but
 
 fn main() i32
 {
